@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Module 1-2 Project - Mark Kapapa"
+run/main_scene="uid://c2o2ictbudt7d"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 

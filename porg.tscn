@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://hoi6luwpnls2"]
+
+[ext_resource type="Script" uid="uid://c856wugha1oa4" path="res://porg.gd" id="1_6f3hi"]
+[ext_resource type="Texture2D" uid="uid://5umgnkop4rix" path="res://porg.png" id="2_34ocw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_30dqm"]
+size = Vector2(65, 97)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=322056131]
+script = ExtResource("1_6f3hi")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1459117869]
+scale = Vector2(0.179, 0.179)
+texture = ExtResource("2_34ocw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1837269953]
+shape = SubResource("RectangleShape2D_30dqm")
