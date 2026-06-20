@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cf2vfuyt5i13x"]
+
+[ext_resource type="Script" uid="uid://wi068cdm57m0" path="res://donut.gd" id="1_oxsal"]
+[ext_resource type="Texture2D" uid="uid://b8yx2wr5vk34d" path="res://donut.png" id="1_s46xv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oxsal"]
+radius = 32.0
+
+[node name="donut" type="Area2D" unique_id=215965029]
+script = ExtResource("1_oxsal")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=315877699]
+texture = ExtResource("1_s46xv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1669447644]
+shape = SubResource("CircleShape2D_oxsal")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

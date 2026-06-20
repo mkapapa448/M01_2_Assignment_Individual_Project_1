@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dw21mviadlhih"
-path="res://.godot/imported/molly.png-b353ef0f667addc8751cbfca530c659f.ctex"
+uid="uid://bck2w8dygldb"
+path="res://.godot/imported/gil.png-93b1f414fb8f049f10b493ab03ea7f8d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://molly.png"
-dest_files=["res://.godot/imported/molly.png-b353ef0f667addc8751cbfca530c659f.ctex"]
+source_file="res://gil.png"
+dest_files=["res://.godot/imported/gil.png-93b1f414fb8f049f10b493ab03ea7f8d.ctex"]
 
 [params]
 

@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cm6yhs1r2foig"]
+
+[ext_resource type="Script" uid="uid://db0p0pujcjoti" path="res://TNT2.gd" id="1_ypqmy"]
+[ext_resource type="Texture2D" uid="uid://v6etylqtgx6e" path="res://tnt.png" id="2_dyby8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ypqmy"]
+size = Vector2(64, 70)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7r4uk"]
+size = Vector2(64, 64)
+
+[node name="TNT" type="StaticBody2D" unique_id=806187850]
+script = ExtResource("1_ypqmy")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=995340204]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=687140009]
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_ypqmy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1183021316]
+shape = SubResource("RectangleShape2D_7r4uk")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=802290489]
+texture = ExtResource("2_dyby8")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
