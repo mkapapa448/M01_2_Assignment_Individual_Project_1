@@ -50,10 +50,6 @@ tile_proxies/coords_level = [[0, Vector2i(0, 0)], [5, Vector2i(0, 0)], [0, Vecto
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i2041"]
 size = Vector2(20275, 5452)
 
-[sub_resource type="LabelSettings" id="LabelSettings_xy4tn"]
-font_size = 28
-font_color = Color(0, 0, 0, 1)
-
 [node name="Level1" type="Node2D" unique_id=19713945]
 script = ExtResource("1_crycw")
 
@@ -103,16 +99,6 @@ grow_vertical = 2
 layout_mode = 1
 offset_right = 220.0
 offset_bottom = 114.0
-
-[node name="Lives" type="Label" parent="CanvasLayer/Control/HBoxContainer" unique_id=54323936]
-layout_mode = 2
-text = "Lives:"
-label_settings = SubResource("LabelSettings_xy4tn")
-
-[node name="Pickups" type="Label" parent="CanvasLayer/Control/HBoxContainer" unique_id=1325397641]
-layout_mode = 2
-text = "Donuts:"
-label_settings = SubResource("LabelSettings_xy4tn")
 
 [connection signal="die" from="Porg" to="." method="_on_porg_die"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
