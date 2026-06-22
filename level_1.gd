@@ -14,3 +14,8 @@ func _process(delta: float) -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == 'Porg':
 		get_tree().call_deferred('reload_current_scene')
+
+
+
+func _on_porg_die() -> void:
+	get_tree().call_deferred('reload_current_scene')

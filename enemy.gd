@@ -31,3 +31,8 @@ func _physics_process(delta: float) -> void:
 				direction = 1
 				break
 				
+func die() -> void:
+	$CollisionShape2D.set_deferred('disabled', true)
+	$AnimationPlayer.play('die')
+	await get_tree().create_timer(1).timeout
+	queue_free()
