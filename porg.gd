@@ -34,6 +34,12 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	
+	for i in range(get_slide_collision_count()):
+		var collision = get_slide_collision(i)
+		if collision.get_normal().y > 0.5 and collision.get_collider().has_method('dispense'):
+			collision.get_collider().dispense()
+			break
+	
 func power_up(num: float) -> void:
 	if collision_shape.shape is RectangleShape2D:
 		collision_shape.shape.size = Vector2(num * 64, num * 96)
