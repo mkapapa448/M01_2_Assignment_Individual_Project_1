@@ -13,4 +13,6 @@ func _process(delta: float) -> void:
 
 
 func _on_button_pressed() -> void:
+	Game.lives = 3
+	Game.donuts = 0
 	get_tree().change_scene_to_file("res://home_screen.tscn")

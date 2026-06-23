@@ -76,4 +76,10 @@ func power_up(num: float) -> void:
 		collision_shape.shape.size = Vector2(num * 64, num * 96)
 		porg_sprite.scale = Vector2(0.192 * num, 0.192*num)
 	power_level = num
-	
+
+func loser():
+	velocity.y = JUMP_VELOCITY * 0.9
+	$CollisionShape2D.set_deferred('disabled', true)
+
+func winner():
+	velocity.y = JUMP_VELOCITY * 3

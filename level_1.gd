@@ -1,11 +1,8 @@
 extends Node2D
 
-var lives
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	lives = 3
-
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -28,3 +25,15 @@ func _on_porg_die() -> void:
 	else:
 		Game.reset_game()
 		get_tree().change_scene_to_file("res://lose_1.tscn")
+
+
+func _on_end_area_body_entered(body: CharacterBody2D) -> void:
+		if Game.donuts > 10:
+			$Porg.winner()
+			await get_tree().create_timer(2.0).timeout
+			get_tree().change_scene_to_file("res://win.tscn")
+		else:
+			$Porg.loser()
+			await get_tree().create_timer(2.0).timeout
+			get_tree().change_scene_to_file("res://lose_2.tscn")
+		
