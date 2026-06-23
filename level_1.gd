@@ -20,6 +20,9 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 
 func _on_porg_die() -> void:
 	Game.lives -= 1
+	if Game.donuts > 0:
+		Game.donuts -= 1
+	
 	if Game.lives > 0:
 		get_tree().call_deferred('reload_current_scene')
 	else:

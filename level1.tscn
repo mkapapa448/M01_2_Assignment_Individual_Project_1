@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cf2vfuyt5i13x" path="res://donut.tscn" id="4_v38iq"]
 [ext_resource type="PackedScene" uid="uid://b2fog6ou8auqt" path="res://enemy.tscn" id="5_i2041"]
 [ext_resource type="PackedScene" uid="uid://cyswbyil2gpe6" path="res://barrier.tscn" id="7_xy4tn"]
+[ext_resource type="Script" uid="uid://c8oebyxjgoxxq" path="res://canvas_layer.gd" id="9_usj0q"]
 
 [sub_resource type="Gradient" id="Gradient_ootpb"]
 colors = PackedColorArray(0.6655928, 0.7691328, 0.98000675, 1, 0.52352667, 0.75727385, 0.9652161, 1)
@@ -82,6 +83,7 @@ position = Vector2(7848.5, 5415)
 shape = SubResource("RectangleShape2D_i2041")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1963172391]
+script = ExtResource("9_usj0q")
 
 [node name="Control" type="Control" parent="CanvasLayer" unique_id=344143486]
 layout_mode = 3
