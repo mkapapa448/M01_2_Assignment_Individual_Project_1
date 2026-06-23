@@ -1,0 +1,6 @@
+extends Node
+
+var lives = 3
+
+func reset_game() -> void:
+	lives = 3

@@ -1,9 +1,10 @@
 extends Node2D
 
+var lives
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	lives = 3
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -18,4 +19,9 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 
 
 func _on_porg_die() -> void:
-	get_tree().call_deferred('reload_current_scene')
+	Game.lives -= 1
+	if Game.lives > 0:
+		get_tree().call_deferred('reload_current_scene')
+	else:
+		Game.reset_game()
+		get_tree().change_scene_to_file("res://lose_1.tscn")

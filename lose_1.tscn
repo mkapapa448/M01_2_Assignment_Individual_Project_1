@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://7egms4d37ibw"]
+
+[ext_resource type="Script" uid="uid://bpbfjf8q61mp2" path="res://win.gd" id="1_tfejn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ee4yu"]
+font_size = 100
+
+[sub_resource type="LabelSettings" id="LabelSettings_tfejn"]
+font_size = 30
+
+[node name="lose1" type="Control" unique_id=1689568200]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tfejn")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1670095215]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.65568244, 0.2196463, 0.19165456, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=741510979]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=2071642254]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1184270444]
+layout_mode = 2
+text = "You lose..."
+label_settings = SubResource("LabelSettings_ee4yu")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer" unique_id=260705825]
+layout_mode = 2
+text = "
+Poor Porg was hit by angry boxes instead
+of filling up with donut happiness. :("
+label_settings = SubResource("LabelSettings_tfejn")
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer" unique_id=2037101133]
+layout_mode = 2
+theme_override_constants/margin_left = 300
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 300
+theme_override_constants/margin_bottom = 10
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer" unique_id=2027452059]
+layout_mode = 2
+text = "Try Again"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/Button" to="." method="_on_button_pressed"]

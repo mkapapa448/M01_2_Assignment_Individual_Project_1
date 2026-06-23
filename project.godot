@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Module 1-2 Project - Mark Kapapa"
-run/main_scene="uid://c2o2ictbudt7d"
+run/main_scene="uid://yefu6uodhncu"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Game="*uid://dysvrvsisan4b"
 
 [editor]
 
